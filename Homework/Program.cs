@@ -5,7 +5,7 @@ using Homework.Entities.Concretes;
 
 Course course1 = new Course()
 {
-    Id = 4,
+    Id = 5,
     InstructorName = "1",
     Name = "Yazılım Geliştirici Yetiştirme Kampı (C# + ANGULAR)",
     PercentageProgress = 10
@@ -25,16 +25,18 @@ foreach (var course in courses)
 courseManager.Add(course1);
 
 List<Course> courses1 = courseManager.GetAll();
+
 foreach (var course in courses1)
 {
     Console.WriteLine(course.Name);
 }
 
 
-courseManager.Delete(4);
+courseManager.Delete(5);
 
-List<Course> courses3 = courseManager.GetAll();
-foreach (var course in courses3)
+List<Course> courses2 = courseManager.GetAll();
+
+foreach (var course in courses2)
 {
     Console.WriteLine(course.Name);
 }
